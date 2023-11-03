@@ -3,9 +3,13 @@
 #include <stdlib.h>
 
 rbtree *new_rbtree(void) {
-  rbtree *p = (rbtree *)calloc(1, sizeof(rbtree));
+  rbtree *t = (rbtree *)calloc(1, sizeof(rbtree));
+  // *t 포인터의 변수이름
   // TODO: initialize struct if needed
-  return p;
+  t->nil = (node_t *)calloc(1, sizeof(node_t));
+  t->nil->color = RBTREE_BLACK;
+  t->root = t->nil;
+  return t;
 }
 
 void delete_rbtree(rbtree *t) {
