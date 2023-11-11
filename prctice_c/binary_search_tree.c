@@ -82,11 +82,11 @@ node_t* delete(node_t *root, int key) {
 
 void inorder(struct node_t *root)
 {
-    if(root!=NULL) // checking if the root is not null
+    if(root!=NULL)
     {
-        inorder(root->left); // visiting left child
-        printf(" %d ", root->key); // printing data at root
-        inorder(root->right);// visiting right child
+        inorder(root->left); 
+        printf(" %d ", root->key); 
+        inorder(root->right);
     }
 }
 
