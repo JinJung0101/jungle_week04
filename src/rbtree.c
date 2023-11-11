@@ -1,7 +1,7 @@
 #include "rbtree.h"
 
 #include <stdlib.h>
-
+ 
 rbtree *new_rbtree(void) {
   // *t 포인터의 변수이름
   rbtree *t = (rbtree *)calloc(1, sizeof(rbtree)); // 트리 생성
